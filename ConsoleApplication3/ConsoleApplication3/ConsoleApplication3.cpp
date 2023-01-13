@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 
 using namespace std;
 
@@ -6,8 +6,8 @@ int main()
 {
     setlocale(LC_CTYPE, "Russian");
 
-    long int sch1;
-    long int sch2;
+    long double sch1;
+    long double sch2;
 
     cout << "Введите количество шаров в лототроне: ";
     cin >> sch1;
@@ -38,22 +38,22 @@ int main()
     cout << "OK" << endl;
     cout << endl;
 
-    long int ver1 = 0;
+    long double ver1 = 0.0000;
     long double ver2 = 0.0000;
     long double ver3 = 0.0000;
 
-    long int copy_sch2 = sch2;
+    long double copy_sch2 = sch2;
 
-    for (int i = 0; i < copy_sch2; i++)
+    for (long double i = 0; i < copy_sch2; i++)
     {
         ver3 = (sch2 - i) / (sch1 - i);
         ver2 = ver2 + ver3;
     }
 
     ver1 = 1 / ver2;
-    cout << "Вероятность выпадения всех чисел 1/" << ver1 << endl;
+    cout << "Вероятность выпадения всех чисел 1 к " << ver1 << endl;
 
     cout << endl;
-    system("pause");
+
     return 0;
 }
